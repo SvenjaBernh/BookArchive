@@ -1,0 +1,27 @@
+[project]
+name = "library-python"
+version = "0.1.0"
+description = "A book library with a command-line interface and web interface"
+readme = "README.md"
+authors = [
+    { name = "SvenjaBernh", email = "" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "nicegui>=3.19.0",
+]
+
+[project.scripts]
+library-python = "library_python.utils.cli:main"
+library-python-gui = "library_python.utils.frontend_cli:main"
+
+[build-system]
+requires = ["uv_build>=0.13.8,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+    "pytest>=9.2.0",
+    "ruff>=0.17.5",
+]
